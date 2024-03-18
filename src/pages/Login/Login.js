@@ -9,7 +9,6 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Logging in with:', username, password);
-    // You can add login logic here
   };
 
   return (
