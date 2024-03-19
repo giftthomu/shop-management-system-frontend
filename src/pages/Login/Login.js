@@ -1,6 +1,20 @@
-
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Login.css';
+
+const Navbar = () => (
+  <nav className="navbar">
+    <div className="flex items-center justify-between p-1 w-[1100px] mx-auto ">
+      <h1 className="text-3xl font-bold">Shop</h1>
+      <ul className="navbar-links">
+        <button type="button" class="text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 mb-2">
+          Log In
+        </button>
+      </ul>
+    </div>
+  </nav>
+  
+);
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -12,31 +26,37 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+    <div>
+      <Navbar/>
+      <div className="mx-auto mt-10 p-3 w-[400px] border border-gray-300 rounded-[0.40rem]">
+        <h2 className="text-3xl font-bold">Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="button" class="text-white bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium  text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 me-2 mb-2">
+            Log In
+          </button>
+          <h1>forgot password?</h1>
+        </form>
+      </div>
     </div>
   );
 };
