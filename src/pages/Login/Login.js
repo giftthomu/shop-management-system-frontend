@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import './Login.css';
 
 const Navbar = () => (
@@ -7,9 +6,9 @@ const Navbar = () => (
     <div className="flex items-center justify-between p-1 w-[1100px] mx-auto ">
       <h1 className="text-3xl font-bold">Shop</h1>
       <ul className="navbar-links">
-        <button type="button" class="text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 mb-2">
-          Log In
-        </button>
+      <button type="button" className="text-gray-900 border border-gray-900 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-2">
+      Log In
+    </button>
       </ul>
     </div>
   </nav>
